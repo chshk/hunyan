@@ -1,0 +1,44 @@
+/* 这个css文件中我们要放就是css的初始化代码 */
+html,body,ul,li,p,h1,h2,h3,form,img {
+	margin:0;
+	padding:0
+}
+img {
+	border: none;
+}
+ul {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+}
+input {
+	/*padding-top: 0;
+	padding-bottom: 0;*/
+	padding: 0;
+}
+body {
+	font: normal normal 12px "宋体";
+	color: #4c4c4c;
+	background-color: #fff;
+}
+.fl	{
+	float: left;
+}
+.fr {
+	float: right;
+}
+.clearfix:after {
+	content: "";
+	height: 0;
+	line-height: 0;
+	display: block;
+	visibility: hidden;
+	clear: both;
+}
+.clearfix {
+	zoom: 1;
+}
+h1,h2,h3,b,strong {
+	font-weight: normal;
+}

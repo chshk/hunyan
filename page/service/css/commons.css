@@ -1,0 +1,51 @@
+/*css初始化代码*/
+html, body, h1, h2, h3,h4, ul, li, dl, dt, dd, p, image, input {
+    margin: 0;
+    padding: 0;
+}
+input,button {
+    border: none;
+    outline: none;
+}
+a {
+    text-decoration: none;
+    color: #666;
+}
+ul {
+    list-style: none;
+}
+img {
+    border: none;
+}
+h1, h2, h3,h4, b {
+    font-weight: normal;
+}
+i {
+    font-style: normal;
+}
+body {
+    background-color: #F6F6F6;
+    font: normal normal 12px Microsoft YaHei;
+    color: #666;
+}
+.fl {
+    float: left;
+}
+.fr {
+    float: right;
+}
+.clearfix:after {
+    content: '';
+    height: 0;
+    line-height: 0;
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
+.clearfix {
+    zoom: 1;
+}
+s, i, em {
+    font-style: normal;
+    text-decoration: none;
+}

@@ -1,0 +1,9 @@
+.you{
+    width: 250px;
+    height: 400px;
+    background-color: blue;
+    float: right;
+    top: 900px;
+    left: 1000px;
+    position: absolute;
+}

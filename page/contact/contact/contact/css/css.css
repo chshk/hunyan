@@ -1,0 +1,129 @@
+
+
+.wz{
+    float: right;
+    margin-left: 10px;
+    font-size: 15px;
+    padding-top: 15px;
+}
+.yw{
+    margin-top: 80px;
+}
+
+.yw-1{
+    text-align: center;
+}
+.yw span{
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center;
+}
+.yw i{
+    font-size: 30px;
+    font-weight: 600;
+}
+.yw em{
+    font-size: 30px;
+}
+.yw-2{
+    margin-top: 10px;
+    text-align: center;
+}
+
+.yw-2 span{
+    font-size: 10px;
+}
+.yw-2 i{
+    font-size: 9px;
+}
+
+/*图标*/
+.tb{
+    width: 884px;
+
+}
+
+
+/*标题*/
+.bt{
+    height: 48px;
+    background-color: skyblue;
+}
+
+.bt span{
+    font-size: 48px;
+    line-height: 48px;
+    float: left;
+    font-weight: 300;
+    color:black;
+}
+.bt i{
+    font-size: 30px;
+    line-height: 48px;
+    float: left;
+    font-weight: 300;
+    color:black;
+}
+
+.tb-2{
+    float: left;
+    margin-left: 40px;
+}
+.tb-3{
+    float: left;
+    margin-left: 40px;
+}
+.tb-4{
+    float: left;
+    margin-left: 40px;
+}
+
+
+/*地址*/
+.khz{
+    height: 321px;
+
+}
+.dizhi{
+    background-color: black;
+    width: 884px;
+    height: 74px;
+}
+.dizhi .zt{
+    width: 400px;
+    float: left;
+    line-height: 61px;
+}
+
+.dizhi span{
+    font-size: 25px;
+    color: #fff;
+}
+
+
+
+.dizhi .qq{
+    float: right;
+}
+
+.ditu-1{
+    float: left;
+    font-size: 20px;
+}
+
+
+
+.foot-adv{
+    height: 250px;
+}
+
+.foot-adv a img{
+    margin: 16px 5px;
+}
+
+
+
+
+
+
+

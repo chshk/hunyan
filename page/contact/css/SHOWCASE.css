@@ -1,0 +1,257 @@
+/*a {*/
+    /*color: #000;*/
+/*}*/
+a:hover {
+    cursor: pointer;
+}
+
+
+/*位置部分*/
+.map {
+    /*width: 1200px;*/
+    /*有版心，无需再设置width*/
+    line-height: 18px;
+    text-align: right;
+    font-size: 14px;
+    color: #717171;
+    font-family: "Microsoft yahei";
+    margin: 25px auto 0;
+}
+.map a {
+    color: #717171;
+}
+.map a:hover {
+    color: #c22cce;
+}
+
+
+/*main部分*/
+/*main标题部分*/
+.main {
+    position: relative; /*链接方向那里需要绝对定位*/
+    margin-bottom: 30px;
+}
+.main .title {
+    margin-top: 30px;
+    text-align: center;
+}
+.main .title h2 {
+    font: bold 32px "Microsoft yahei";
+
+}
+.main .title h2 .sp1 {
+    font-size: 28px;
+    color: #000;
+    font-weight: normal;
+}
+.main .title .border {
+    border-top: 2px solid #cbcbcb;
+    width: 70px;
+    height: 6px;
+    margin: 0 auto;
+}
+.main .title p:nth-child(3) {
+    color: #3c3c3c;
+}
+.main .title p:nth-child(4) {
+    color: #b0b0b0;
+}
+
+
+/*链接部分*/
+.main .link {
+    width: 1080px;
+    margin: 50px auto 0;
+}
+.main .link .zt li {
+    float: left;
+    height: 70px;
+    width: 400px;
+    text-align: center;
+    line-height: 70px;
+    font-size: 30px;
+    border: 1px solid #c4c4c4;
+    margin: 0 40px 0 50px;
+    /*background-color: #0ff;*//*先不给颜色，用JQ做动画*/
+}
+.main .link .zt a{
+    color: #000;
+    font-family:"Microsoft yahei";
+}
+.main .link .zt li:hover {
+    cursor: pointer;
+}
+.main .link .arrow .arrow-next {
+    position: absolute;
+    left: 10px;
+    top: 165px;
+    width: 27px;
+    height: 69px;
+    background: url("../images/SHOWCASE/caarr.png") no-repeat;
+}
+.main .link .arrow .arrow-next:hover {
+    background: url("../images/SHOWCASE/caarr.png") no-repeat 0 -70px;
+}
+.main .link .arrow .arrow-prev {
+    position: absolute;
+    top: 165px;
+    right: 10px;
+    width: 27px;
+    height: 69px;
+    background: url("../images/SHOWCASE/caarr.png") no-repeat -30px 0;
+}
+.main .link .arrow .arrow-prev:hover {
+    background: url("../images/SHOWCASE/caarr.png") no-repeat -30px -70px;
+}
+
+
+/*图片部分*/
+.main .content {
+    margin: 50px auto 0;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #717171; /*怎么解决？----给最大的父元素清除浮动或者设置高度*/
+}
+.main .content .one {
+    width: 110%;
+}
+.main .content .one.left a {
+    float: left;
+    width: 385px;
+    height: 550px;
+    margin: 0 20px 20px 0;
+    position: relative;
+}
+.main .content .one.left a .img1 {
+    height: 550px;
+    width: 385px;
+    overflow: hidden;
+}
+.main .content .one.left a img {
+    transition: all 1s; /*css3属性*/
+}
+.main .content .one.left a:hover img {
+    transform: scale(1.2); /*css3属性*/
+}
+.main .content .one.left a:hover .des {
+    /*.des就是找到谁，给谁效果*/
+    background: url("../images/SHOWCASE/catit.png") no-repeat -385px 0;
+    height: 80px;
+    width: 385px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.main .content .one.left a .des {
+    width: 385px;
+    height: 80px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: url("../images/SHOWCASE/catit.png") no-repeat;
+}
+.main .content .one.left a .des span{
+    display: block;
+    padding: 55px 0 0 30px;
+    font-size:16px;
+    color:#fff;
+}
+.main .content .one.left a .des span{/*css3属性*/
+    transition:all 4s;
+}
+.main .content .one.left a:hover .des span {
+    color: #000;
+}
+/*为JQ服务*/
+.main .link .zt .active{
+    background-color: #7edab2;
+}
+.main .content .one{
+    display:none;
+}
+.main .content .one.selected{
+    display:block;
+}
+
+
+/*外景*/
+/*.main .content .middle .hezi{*/
+    /*float:left;*/
+    /*margin: 0 80px 50px 0;*/
+    /*position: relative;*/
+    /*overflow:hidden;*/
+    /*width: 350px;*/
+    /*height: 350px;*/
+    /*border-radius:50%;*/
+    /*background-color: #f00;*/
+/*}*/
+.main .content .middle{
+    padding-left:40px;
+}
+.main .content .middle a{
+    /*float: left;*/
+    display:inline-block;
+    width: 300px;
+    height: 300px;
+    border-radius:50%;
+    /*margin: 0 100px 50px 0;*/
+    position: relative;
+    overflow:hidden;
+}
+.main .content .middle a img{
+    width: 300px;
+    height: 300px;
+    border-radius:50%;
+}
+.main .content .middle a .mengban{
+    width: 300px;
+    height: 300px;
+    border-radius:50%;
+    background-color:rgba(0,0,0,.5);
+    position: absolute;
+    top:-300px;
+}
+/*引用图标*/
+@font-face {
+    font-family: 'iconfont';
+    src: url('../iconfont/iconfont.eot'); /* IE9*/
+    src: url('../iconfont/iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../iconfont/iconfont.woff') format('woff'), /* chrome、firefox */
+    url('../iconfont/iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('../iconfont/iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+.iconfont {
+    font-family: 'iconfont';
+    font-size: 50px;
+    color: rgba(255,255,255,0.8);
+    /*color:#000;*/
+    position: absolute;
+    left: -80px;
+    top:50%;
+    margin-top:-10px;
+    font-size:80px;
+}
+
+.main .content .middle .hezi{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    /*background-color: #0ff;*/
+    float:left;
+    margin: 0 100px 100px 0;
+}
+.main .content .middle .hezi .miaoshu{
+    position: absolute;
+    width: 300px;
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+    font:24px "Microsoft yahei";
+    margin-top: 20px;
+    cursor:pointer;
+}
+.tp{
+    margin-bottom:20px;
+}
+
+
+

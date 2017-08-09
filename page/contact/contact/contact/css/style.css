@@ -1,0 +1,125 @@
+/*css 初始�? */
+html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img {
+    margin: 0;
+    padding: 0;  /*清除元素的内外边�?*/
+}
+
+fieldset, img, input, button {
+    border: none;
+    padding: 0;
+    margin: 0;
+    outline-style: none;  /*外面环绕�?*/
+}
+
+ul, ol {
+    list-style: none;
+}
+
+/*去掉原样式中的小黑点*/
+input {
+    padding-top: 0;
+    padding-bottom: 0;
+    font-family: "SimSun", "宋体";  /*字体的自动识�?*/
+}
+
+select, input {
+    vertical-align: middle;
+}
+
+/*输入字居中显�?*/
+select, input, textarea {
+    font-size: 12px;
+    margin: 0;
+}
+
+/**/
+textarea {
+    resize: none;  /*不可以随意拖�?*/
+}
+
+/*防止拖动*/
+img {
+    border: 0;
+    vertical-align: middle; /*  去掉图片底部默认�?3像素空白缝隙*/
+}
+
+table {
+    border-collapse: collapse; /*合并外连�?*/
+}
+
+body {
+    font: 12px/150% "microsoft yahei",Arial, Verdana, "\5b8b\4f53"; /*unitedCode的写法，宋体的写�?*/
+    color: #666; /*150%基于当前字体尺寸的百分比行间�?*/
+    background: #fff;
+}
+
+.clearfix:before, .clearfix:after {
+    /*清除浮动，最好最标准的写�?*/
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1; /*IE/7/6*/  /*兼容IE6下的写法*/
+}
+
+a {
+    color: #fff;   /*a 标签是不继承颜色 �?*/
+    text-decoration: none;
+}
+
+a:hover {
+    color: #fff600;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 100%;
+}
+
+s, i, em {  /*�?般是起装饰作�?*/
+    font-style: normal;  /*去掉原有的样�?*/
+    text-decoration: none;  /*去掉下划线或是删除线*/
+}
+
+.col-red {
+    color: #C81623 !important;/*主色�?*/
+}
+
+/*公共�?*/
+.w {
+    /*版心 提取 */
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.al {
+    text-align: left;
+}
+
+.ac {
+    text-align: center;
+}
+
+.ar {
+    text-align: right;
+}
+
+.hide {
+    display: none;
+}
+
+/*css初始化完�?*/

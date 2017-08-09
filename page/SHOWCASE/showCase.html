@@ -1,0 +1,555 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>所有样片--北京蒙娜丽莎婚纱摄影</title>
+    <link rel="stylesheet" href="css/common.css"/>
+    <link rel="stylesheet" href="css/showCase.css"/>
+    <script src="js/jquery-1.12.4.js"></script>
+    <script>
+            $(function(){
+//            head B
+//            .hnav鼠标移入显示下拉菜单
+                $li=$("#ul>li");
+                var hc=['HOME','ABOUT','SHOW CASE','LOVE SHOW','NEWS','SERVISE','CONCAT','ORDERS'];
+                var hcy=['首页','关于我们','SHOW CASE','客片大赏','新闻中心','服务报价','联系我们','在线订单'];
+                    $li.mouseenter(function(){
+                        $(this).children('ul').children("li").stop().slideDown(20);
+                        $(this).children('a').html(hc[$(this).index()]);
+                        /*找到标签对应的索引,通过索引获取对应的音乐标签*/
+                        var i = $(this).index()
+                        /*获取对应的dom对象,调用原生的加载,和播放方法*/
+                        $('audio').get(i).load();
+                        $('audio').get(i).play();
+                    });
+                    $li.mouseleave(function(){
+                        $(this).children('ul').children("li").stop().slideUp(20);
+                        $(this).children('a').html(hcy[$(this).index()]);
+                    });
+//            head E
+//                SHOW CASE B
+                $uls=$(".scenerylist>ul>li");
+                $uls.mouseenter(function(){
+                    $(".scenerylist>ul>li").css("backgroundColor",'');
+                    $(this).css("backgroundColor",'#7edab2');
+                    $($('.scene')[$(this).index()]).show().siblings().hide();
+                    $('.cf>span').html($(this).index()+1);
+                })
+                $uls.mouseleave(function(){
+                    $(this).css("backgroundColor",'');
+                })
+
+                    var count = 0;
+                    /*点击右边*/
+                    $('.arrowr').click(function(){
+                        count++;
+                        if(count >= $('.scenerylist>ul>li').length){
+                            count = 0;
+                        }
+                        $('.scenerylist>ul>li').eq(count).css("backgroundColor",'#7edab2').siblings().css("backgroundColor",'');
+                        $($('.scene').eq(count)).show().siblings().hide();
+                        $('.cf>span').html(count+1);
+                    })
+
+                    /*点击左边*/
+                    $('.arrowl').click(function(){
+                        count--;
+                        if(count <= -1){
+                            count = $('.scenerylist>ul>li').length -1;
+                        }
+                        $('.scenerylist>ul>li').eq(count).css("backgroundColor",'#7edab2').siblings().css("backgroundColor",'');
+                        $($('.scene').eq(count)).show().siblings().hide();
+                        $('.cf>span').html(count+1);
+                    })
+                /*点击NEXT*/
+                var cut=0;
+                $('.next').click(function(){
+                    cut++;
+                    if(cut >= $('.scenerylist>ul>li').length){
+                        cut = 0;
+                    }
+                    $('.scenerylist>ul>li').eq(cut).css("backgroundColor",'#7edab2').siblings().css("backgroundColor",'');
+                    $($('.scene').eq(cut)).show().siblings().hide();
+                    $('.cf>span').html(cut+1);
+                })
+
+                /*点击PREV*/
+                $('.prev').click(function(){
+                    cut--;
+                    if(cut <= -1){
+                        cut = $('.scenerylist>ul>li').length -1;
+                    }
+                    $('.scenerylist>ul>li').eq(cut).css("backgroundColor",'#7edab2').siblings().css("backgroundColor",'');
+                    $($('.scene').eq(cut)).show().siblings().hide();
+                    $('.cf>span').html(cut+1);
+                })
+//鼠标移入图片，图片放大
+                $(".cc a").mouseenter(function() {
+                    $(this).css("opacity","1").siblings().css("opacity","0.3");
+                });
+                $(".cc").mouseleave(function(){
+                    $(this).find('a').css("opacity",1);
+                });
+//                SHOW CASE E
+
+            })
+
+    </script>
+</head>
+<body>
+<div class="head">
+    <embed src="mp3/My Heart Will Go On.mp3" hidden="true" autostart="true" loop="1">
+    <div class="htop center">
+        <div class="logo fl">
+        </div>
+        <div class="hnav fr">
+            <ul class="clearfix" id="ul">
+                <li><a href="../../index.html">首页</a>
+                <span><a href="javascript:void(0);">HOME</a></span></li>
+                <li><a href="#">关于我们</a>
+                    <span><a href="javascript:void(0)">ABOUT</a></span>
+                    <ul>
+                        <li><a href="javascript:void(0);">客户分享</a></li>
+                        <li><a href="javascript:void(0);">礼服展示</a></li>
+                        <li><a href="javascript:void(0);">微电影</a></li>
+                    </ul></li>
+                <li><a href="#" class="SHOW">SHOWCASE</a>
+                    <ul>
+                        <li><a href="javascript:void(0);">内景</a></li>
+                        <li><a href="javascript:void(0);">外景</a></li>
+                    </ul></li>
+                <li><a href="../movie/蒙娜丽莎1/index.html">客片欣赏</a>
+                <span><a href="javascript:void(0)">LOVE SHOW</a></span></li>
+                <li><a href="../news/news.html">新闻中心</a>
+                    <span><a href="javascript:void(0)">NEWS</a></span>
+                    <ul>
+                        <li><a href="javascript:void(0);">内景</a></li>
+                        <li><a href="javascript:void(0);">外景</a></li>
+                        <li><a href="javascript:void(0);">主题</a></li>
+                    </ul></li>
+                <li><a href="../service/5.html">服务报价</a>
+                    <span><a href="javascript:void(0)">SERVICE</a></span>
+                    <ul>
+                        <li><a href="javascript:void(0);">推荐套系</a></li>
+                        <li><a href="javascript:void(0);">网络套系</a></li>
+                    </ul></li>
+                <li><a href="../contact/contact/contact/index.html">联系我们</a><span><a href="javascript:void(0)">CONTACT</a></span></li>
+                <li><a href="#">在线订单</a><span><a href="javascript:void(0)">ORDERS</a></span></li>
+            </ul>
+            <div>
+                <audio src="mp3/1.ogg"></audio>
+                <audio src="mp3/2.ogg"></audio>
+                <audio src="mp3/3.ogg"></audio>
+                <audio src="mp3/4.ogg"></audio>
+                <audio src="mp3/5.ogg"></audio>
+                <audio src="mp3/6.ogg"></audio>
+                <audio src="mp3/7.ogg"></audio>
+                <audio src="mp3/8.ogg"></audio>
+                <audio src="mp3/9.ogg"></audio>
+            </div>
+        </div>
+        <!--立方体 B-->
+        <div class="box">
+            <div class="up"><img src="picture/28.jpg" alt=""/></div>
+            <div class="down"><img src="picture/29.jpg" alt=""/></div>
+            <div class="left"><img src="picture/30.jpg" alt=""/></div>
+            <div class="right"><img src="picture/31.jpg" alt=""/></div>
+            <div class="forward"><img src="picture/32.jpg" alt=""/></div>
+            <div class="back"><img src="picture/33.jpg" alt=""/></div>
+        </div>
+
+        <!--立方体 E-->
+    </div>
+    <div class="square"><span></span></div>
+</div>
+<div class="headline">
+    <div class="center clearfix">
+        <div class="hl fl">
+            <span>TEL</span>
+            <b>57106130</b>
+        </div>
+        <div class="hr fr">
+            <span>QQ在线客服</span>
+        </div>
+    </div>
+</div>
+<div class="content">
+    <div class="center">
+        <div class="ct">
+            <div class="pstion clearfix">
+                <ul class="fr">
+                    <li>您所在的位置：</li>
+                    <li><a href="javascript:void(0)">首页</a>&nbsp;<span>></span></li>
+                    <li><a href="javascript:void(0)">作品展示</a>&nbsp;<span>></span></li>
+                    <li><a href="javascript:void(0)">所有样片</a></li>
+                </ul>
+            </div>
+            <h1>
+                <span>SHOWCASE</span>
+                <i>作品展示</i>
+                <div class="border"></div>
+            </h1>
+            <dl>
+                <dt>我们用影像触碰心灵，感受幸福的温度</dt>
+                <dd>We use images to touch the heart, feel the temperature of happiness</dd>
+            </dl>
+            <div class="scenerylist">
+                <ul class="clearfix">
+                    <li><a href="javascript:void(0)">内景</a></li>
+                    <li><a href="javascript:void(0)">外景</a></li>
+                    <li><a href="javascript:void(0)">主题</a></li>
+                </ul>
+                <div class="arrowl">
+
+                </div>
+                <div class="arrowr">
+
+                </div>
+            </div>
+        </div>
+        <div class="cc clearfix">
+           <div class="neijing scene">
+               <a href="javascript:void(0)">
+                   <img src="picture/1.jpg" alt=""/>
+                   <div class="casttitle">
+                       <dl>
+                           <dt>Case Title</dt>
+                           <dd>内景&nbsp;-&nbsp;深海</dd>
+                       </dl>
+                   </div>
+               </a>
+               <a href="javascript:void(0)">
+                   <img src="picture/2.jpg" alt=""/>
+                   <div class="casttitle">
+                       <dl>
+                           <dt>Case Title</dt>
+                           <dd>内景&nbsp;-&nbsp;夏树</dd>
+                       </dl>
+                   </div>
+               </a>
+               <a href="javascript:void(0)">
+                   <img src="picture/3.jpg" alt=""/>
+                   <div class="casttitle">
+                       <dl>
+                           <dt>Case Title</dt>
+                           <dd>内景&nbsp;-&nbsp;爱斯特</dd>
+                       </dl>
+                   </div>
+               </a>
+               <a href="javascript:void(0)">
+                   <img src="picture/4.jpg" alt=""/>
+                   <div class="casttitle">
+                       <dl>
+                           <dt>Case Title</dt>
+                           <dd>内景&nbsp;-&nbsp;塞纳宫</dd>
+                       </dl>
+                   </div>
+               </a>
+               <a href="javascript:void(0)">
+                   <img src="picture/5.jpg" alt=""/>
+                   <div class="casttitle">
+                       <dl>
+                           <dt>Case Title</dt>
+                           <dd>内景&nbsp;-&nbsp;欧若拉</dd>
+                       </dl>
+                   </div>
+               </a>
+               <a href="javascript:void(0)">
+                   <img src="picture/6.jpg" alt=""/>
+                   <div class="casttitle">
+                       <dl>
+                           <dt>Case Title</dt>
+                           <dd>内景&nbsp;-&nbsp;欧米伽</dd>
+                       </dl>
+                   </div>
+               </a>
+               <a href="javascript:void(0)">
+                   <img src="picture/7.jpg" alt=""/>
+                   <div class="casttitle">
+                       <dl>
+                           <dt>Case Title</dt>
+                           <dd>内景&nbsp;-&nbsp;偶遇之旅</dd>
+                       </dl>
+                   </div>
+               </a>
+               <a href="javascript:void(0)">
+                   <img src="picture/8.jpg" alt=""/>
+                   <div class="casttitle">
+                       <dl>
+                           <dt>Case Title</dt>
+                           <dd>内景&nbsp;-&nbsp;挪威森林</dd>
+                       </dl>
+                   </div>
+               </a>
+               <a href="javascript:void(0)">
+                   <img src="picture/9.jpg" alt=""/>
+                   <div class="casttitle">
+                       <dl>
+                           <dt>Case Title</dt>
+                           <dd>内景&nbsp;-&nbsp;繁华如梦</dd>
+                       </dl>
+                   </div>
+               </a>
+           </div>
+            <div class="waijing scene">
+                <a href="javascript:void(0)">
+                    <img src="picture/10.jpg" alt=""/>
+                    <div class="casttitle">
+                        <dl>
+                            <dt>Case Title</dt>
+                            <dd>外景 - 王府井教堂</dd>
+                        </dl>
+                    </div>
+                </a>
+                <a href="javascript:void(0)">
+                    <img src="picture/11.jpg" alt=""/>
+                    <div class="casttitle">
+                        <dl>
+                            <dt>Case Title</dt>
+                            <dd>外景 - 城市旅拍</dd>
+                        </dl>
+                    </div>
+                </a>
+                <a href="javascript:void(0)">
+                    <img src="picture/12.jpg" alt=""/>
+                    <div class="casttitle">
+                        <dl>
+                            <dt>Case Title</dt>
+                            <dd>外景 - 城市旅拍798...</dd>
+                        </dl>
+                    </div>
+                </a>
+                <a href="javascript:void(0)">
+                    <img src="picture/13.jpg" alt=""/>
+                    <div class="casttitle">
+                        <dl>
+                            <dt>Case Title</dt>
+                            <dd>外景-《十渡情缘》系...</dd>
+                        </dl>
+                    </div>
+                </a>
+                <a href="javascript:void(0)">
+                    <img src="picture/14.jpg" alt=""/>
+                    <div class="casttitle">
+                        <dl>
+                            <dt>Case Title</dt>
+                            <dd>外景-《胡同大妞》系...</dd>
+                        </dl>
+                    </div>
+                </a>
+                <a href="javascript:void(0)">
+                    <img src="picture/15.jpg" alt=""/>
+                    <div class="casttitle">
+                        <dl>
+                            <dt>Case Title</dt>
+                            <dd>外景-《草蔓行记》系...</dd>
+                        </dl>
+                    </div>
+                </a>
+                <a href="javascript:void(0)">
+                    <img src="picture/16.jpg" alt=""/>
+                    <div class="casttitle">
+                        <dl>
+                            <dt>Case Title</dt>
+                            <dd>外景-《紫色约定》系...</dd>
+                        </dl>
+                    </div>
+                </a>
+                <a href="javascript:void(0)">
+                    <img src="picture/17.jpg" alt=""/>
+                    <div class="casttitle">
+                        <dl>
+                            <dt>Case Title</dt>
+                            <dd>外景-《浮生若梦》系...</dd>
+                        </dl>
+                    </div>
+                </a>
+                <a href="javascript:void(0)">
+                    <img src="picture/18.jpg" alt=""/>
+                    <div class="casttitle">
+                        <dl>
+                            <dt>Case Title</dt>
+                            <dd>外景-《拉斐特城堡》...</dd>
+                        </dl>
+                    </div>
+                </a>
+            </div>
+            <div class="theme scene">
+                <a href="javascript:void(0)">
+                    <img src="picture/19.jpg" alt=""/>
+                    <div class="casttitle">
+                        <dl>
+                            <dt>Case Title</dt>
+                            <dd>主题 - 人鱼公主</dd>
+                        </dl>
+                    </div>
+                </a>
+                <a href="javascript:void(0)">
+                    <img src="picture/20.jpg" alt=""/>
+                    <div class="casttitle">
+                        <dl>
+                            <dt>Case Title</dt>
+                            <dd>主题 - 个性婚纱照</dd>
+                        </dl>
+                    </div>
+                </a>
+                <a href="javascript:void(0)">
+                    <img src="picture/21.jpg" alt=""/>
+                    <div class="casttitle">
+                        <dl>
+                            <dt>Case Title</dt>
+                            <dd>主题 - 纯美系列</dd>
+                        </dl>
+                    </div>
+                </a>
+                <a href="javascript:void(0)">
+                    <img src="picture/22.jpg" alt=""/>
+                    <div class="casttitle">
+                        <dl>
+                            <dt>Case Title</dt>
+                            <dd>主题 - 雨景</dd>
+                        </dl>
+                    </div>
+                </a>
+                <a href="javascript:void(0)">
+                    <img src="picture/23.jpg" alt=""/>
+                    <div class="casttitle">
+                        <dl>
+                            <dt>Case Title</dt>
+                            <dd>主题 - 境美系列</dd>
+                        </dl>
+                    </div>
+                </a>
+                <a href="javascript:void(0)">
+                    <img src="picture/24.jpg" alt=""/>
+                    <div class="casttitle">
+                        <dl>
+                            <dt>Case Title</dt>
+                            <dd>主题 - 挚爱</dd>
+                        </dl>
+                    </div>
+                </a>
+                <a href="javascript:void(0)">
+                    <img src="picture/25.jpg" alt=""/>
+                    <div class="casttitle">
+                        <dl>
+                            <dt>Case Title</dt>
+                            <dd>《新京味》</dd>
+                        </dl>
+                    </div>
+                </a>
+                <a href="javascript:void(0)">
+                    <img src="picture/26.jpg" alt=""/>
+                    <div class="casttitle">
+                        <dl>
+                            <dt>Case Title</dt>
+                            <dd>主题 - 繁花如梦[北京...</dd>
+                        </dl>
+                    </div>
+                </a>
+                <a href="javascript:void(0)">
+                    <img src="picture/27.jpg" alt=""/>
+                    <div class="casttitle">
+                        <dl>
+                            <dt>Case Title</dt>
+                            <dd>主题 - 繁花如梦2</dd>
+                        </dl>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="cf">
+            <a href="javascript:void(0)" class="prev">《Previous</a>
+            &nbsp;
+            &nbsp;
+            &nbsp;
+            &nbsp;
+            <span>1</span>
+            &nbsp;
+            &nbsp;
+            &nbsp;
+            &nbsp;
+            <a href="javascript:void(0)" class="next">next》</a>
+        </div>
+    </div>
+</div>
+<div class="foot">
+        <div class="ft clearfix">
+            <div class="center">
+                <div class="ftl fl">
+                    <a href="javascript:void(0)"><img src="picture/ftlogo.png" alt=""/></a>
+                </div>
+                <div class="ftr fr">
+                    <dl class="lg">
+                        <dt>蒙娜丽莎</dt>
+                        <dd class="tel">57106130</dd>
+                        <dd class="add">北京市东城区 东四南大街143号</dd>
+                    </dl>
+                    <dl class="wx">
+                        <dt>欢迎订阅蒙娜丽莎官方微信</dt>
+                        <dd>蒙娜丽莎<span>@ WEIXIN</span></dd>
+                        <dd>微信号：<span>bjmnls</span></dd>
+                    </dl>
+                    <dl class="wb">
+                        <dt>欢迎订阅蒙娜丽莎官方微博</dt>
+                        <dd>蒙娜丽莎<span>@ WEIBO</span> </dd>
+                        <dd>微博号：<span>北京蒙娜丽莎摄影</span></dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+        <div class="fc clearfix">
+            <div class="center">
+                <ul class="clearfix">
+                    <li>
+                        <dl>
+                        <dt><a href="javascript:void(0)">REDU</a></dt>
+                        <dd><a href="javascript:void(0)">REDUABOUT US关于我们</a></dd>
+                        <dd><a href="javascript:void(0)">CONTACT US 联系我们</a></dd>
+                        <dd><a href="javascript:void(0)">CUSTOMER SHARE 客户分享</a></dd>
+                    </dl>
+                    </li>
+                    <li>
+                        <dl>
+                        <dt><a href="javascript:void(0)">Show Case</a></dt>
+                        <dd><a href="javascript:void(0)">HIGH-END 外景</a>
+                        <a href="javascript:void(0)">FASHION 内景</a></dd>
+                        <dd><a href="javascript:void(0)">THEME 主题</a></dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt><a href="javascript:void(0)">Love Show</a></dt>
+                            <dd><a href="javascript:void(0)">LOVE SHOW 客片欣赏</a></dd>
+                            <dd><a href="javascript:void(0)">CUSTOMER 客户好评</a></dd>
+                            <dd><a href="javascript:void(0)">ORDER 在线订单</a></dd>
+                            <dd><a href="javascript:void(0)">DRESS 礼服展示</a></dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt><a href="javascript:void(0)">News</a></dt>
+                            <dd><a href="javascript:void(0)">ACTIVITY 流行趋势</a></dd>
+                            <dd><a href="javascript:void(0)">SERVICE TIPS 服务贴士</a></dd>
+                            <dd><a href="javascript:void(0)">NEWS 新动态</a></dd>
+                            <dd><a href="javascript:void(0)">MICRO FILM 微电影</a></dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt><a href="javascript:void(0)">Service</a></dt>
+                            <dd><a href="javascript:void(0)">RECOMMENDED推荐套系</a></dd>
+                            <dd><a href="javascript:void(0)">HOT网络套系</a></dd>
+                        </dl>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="fb clearfix">
+            <div class="center">
+                <p>Copyright © 2015-2017 http://www.mnls.com & 北京蒙娜丽莎婚纱摄影_北京婚纱摄影_北京婚纱摄影哪里好_北京婚纱照_北京蒙娜丽莎婚纱摄影官网_北京婚纱影楼版权所有 All Rights Reserved 技术支持： 京ICP备12018289号-1</p>
+            </div>
+        </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>蒙娜丽莎Service</title>
+    <link rel="stylesheet" href="css/页面初始化.css">
+    <link rel="stylesheet" href="./css/commons.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/css.css" />
+    <link rel="icon" href="service/favicon.ico">
+    <script src="js/animate.js"></script>
+    <script src="js/commom.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .box {
+            width: 730px;
+            height: 315px;
+            padding: 8px;
+            margin: 100px auto;
+        }
+
+        .inner {
+            position: relative;
+            overflow: hidden;
+            height: 454px;
+            width: 900px;
+            left: -110px;
+            top: -8px;
+        }
+
+        #imglist {
+            width: 700%;
+            position: absolute;
+            left: 0;
+        }
+
+        li {
+            float: left;
+        }
+
+        .list {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            margin-left: -85px;
+        }
+
+        .list i {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: #fff;
+            color: #333;
+            float: left;
+            font-style: normal;
+            line-height: 20px;
+            font-size: 14px;
+            text-align: center;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+
+        .list i:last-child {
+            margin-right: 0;
+        }
+
+        .list i.current {
+            background-color: skyblue;
+            color: #fff;
+        }
+
+        .arrow {
+            position: absolute;
+            width: 100%;
+            top: 50%;
+            margin-top: -30px;
+        }
+
+        .arrow-left,
+        .arrow-right {
+            width: 30px;
+            height: 60px;
+            position: absolute;
+            font: 20px/60px "consolas";
+            color: #fff;
+            background-color: rgba(0, 0, 0, .3);
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .arrow-right {
+            right: 0;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <div class="dingwei">
+        <img src="service/16.png" height="128" width="150" alt="">
+    </div>
+    <div class="lunbo">
+        <div class="center">
+            <!-- <img src="images/kaito1.jpg"    alt=""> -->
+            <div class="daohang">
+                <div class="left fl">
+                    <a href="../../index.html">
+                    <img src="service/logo.png" height="68" width="162" alt="">
+                    </a>
+                </div>
+                <div class="right fr">
+                    <ul>
+                        <li><a href="#">关于我们</a></li>
+                        <li><a href="../SHOWCASE/showCase.html">作品展示</a></li>
+                        <li><a href="../movie/蒙娜丽莎1/index.html">客片大赏</a></li>
+                        <li><a href="../news/news.html">新闻中心</a></li>
+                        <li><a href="#">SERVICE</a></li>
+                        <li><a href="../contact/contact/contact/index.html">联系我们</a></li>
+                        <li><a href="#">在线定单</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--<div class="lianxi">
+        <div class="center">
+            <div class="left fl">
+                <p class="p1">TEL</p>
+                <p class="p2">57106103</p>
+            </div>
+            <div class="right fr">
+                <ul class="clearfix">
+                    <li>
+                        <a class="a1" href="#">
+                               <img src="service/04qq.png" height="42" width="44" alt="">
+                                 <p class="p1"><a href="#">QQ在线客服</a></p>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="a2" href="#">
+                             <img src="service/05weix.png" height="44" width="43" alt="">
+                                <p  class="p2"><a href="#">欢迎关注官方微信</a></p>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="a3" href="#">
+                            <img src="service/06.weibo.png" height="44" width="44" alt="">
+                               <p  class="p3"><a href="#">欢迎关注官方微博</a></p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>-->
+            <!--headline B  -->
+    <div class="headline">
+        <div class="h_c center">
+            <div class="h_c_l fl">
+                <i>TEL&nbsp;</i>
+                <span>57106130</span>
+            </div>
+            <div class="h_c_r_1 fr">
+                <a href="javascript:void(0);" target="_blank" title="QQ在线客服" class="a1">
+                        <i>QQ</i>
+                        <span>在线客服</span>
+                    </a>
+            </div>
+            <div class="h_c_r_2 fr">
+                <a href="javascript:void(0);" target="_blank" title="官方微信" class="a1">
+                        <i>WeChat</i>
+                        <span></span>
+                    </a>
+            </div>
+            <div class="h_c_r_3 fr">
+                <a href="javascript:void(0);" target="_blank" title="官方微博" class="a1">
+                        <i></i>
+                        <span>官方微博</span>
+                    </a>
+            </div>
+        </div>
+    </div>
+    <!--headline E  -->
+
+    <div class="box" id="box">
+        <div class="inner" id="inner">
+            <ul id="imglist">
+                <li><a href="#"><img src="service/1.jpg" width="900"height="454" alt=""></a></li>
+                <li><a href="#"><img src="service/2.jpg" width="900"height="454" alt=""></a></li>
+                <li><a href="#"><img src="service/3.jpg" width="900"height="454" alt=""></a></li>
+                <li><a href="#"><img src="service/4.jpg" width="900"height="454" alt=""></a></li>
+                <li><a href="#"><img src="service/5.jpg" width="900"height="454" alt=""></a></li>
+                <li><a href="#"><img src="service/6.jpg" width="900"height="454" alt=""></a></li>
+            </ul>
+            <div class="list" id="list">
+
+            </div>
+            <div class="arrow">
+                <span class="arrow-left">&lt;</span>
+                <span class="arrow-right">&gt;</span>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="fwbj">
+        <div class="center">
+            <strong>SERVICE OFFERS 服务报价</strong>
+            <s class="zi1">我们用影像触碰心灵，感受幸福的温度</s>
+            <p class="zi2">We use images to touch the heart, feel the temperature of happiness
+        </div>
+    </div>
+    <div class="tjtx">
+        <div class="center">
+            <div class="left fl"></div>
+            <div class="zhong">
+                <div class="tuijian"><a href="#">推荐套系</a></div>
+                <div class="wangluo"><a href="#">网络套系</a></div>
+            </div>
+            <div class="right  fr"></div>
+        </div>
+    </div>
+
+    <div class="wrap" id="wrap">
+        <div class="slide" id="slide">
+            <ul>
+                <li>
+                    <a href="#"><img src="service/10000.jpg" alt="" /></a>
+                </li>
+                <li>
+                    <a href="#"><img src="service/10001.jpg" alt="" /></a>
+                </li>
+                <li>
+                    <a href="#"><img src="service/10002.jpg" alt="" /></a>
+                </li>
+                <li>
+                    <a href="#"><img src="service/10003.jpg" alt="" /></a>
+                </li>
+                <li>
+                    <a href="#"><img src="service/10004.jpg" alt="" /></a>
+                </li>
+            </ul>
+            <div class="arrow" id="arrow">
+                <a href="javascript:;" class="prev" id="arrLeft"></a>
+                <a href="javascript:;" class="next" id="arrRight"></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="fwbj2">
+        <div class="center">
+            <strong> LOVESHOW客片欣赏</strong>
+            <s class="zi1">我们用影像触碰心灵，感受幸福的温度</s>
+            <p class="zi2">We use images to touch the heart, feel the temperature of happiness
+        </div>
+    </div>
+
+    <div class="tehui">
+        <ul>
+            <li class="li1">
+                <a href="#"><img src="service/08.jpg" alt=""></a>
+                <div>
+                    <s><img src="service/456789.jpg" height="45" width="47" alt=""></s>
+                    <p>已经有123456对新人报名</p>
+                </div>
+            </li>
+            <li class="li2">
+                <a href="#"><img src="service/09.jpg" alt=""></a>
+                <div>
+                    <s><img src="service/456789.jpg" height="45" width="47" alt=""></s>
+                    <p>已经有123456对新人报名</p>
+                </div>
+            </li>
+            <li class="li3">
+                <a href="#"><img src="service/10.jpg" alt=""></a>
+                <div>
+                    <s><img src="service/456789.jpg" height="45" width="47" alt=""></s>
+                    <p>已经有123456对新人报名</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+
+
+    <div class="dibu-three">
+        <div class="dibu-three-banxin">
+            <div class="dibu-three-01">
+                <a href="#"><img src="service/12.png" alt=""/></a>
+            </div>
+            <div class="dibu-three-02">
+                <i>蒙娜丽莎</i>
+                <s>57106130</s>
+                <span> 北京市东城区 东四南大街143号</span>
+            </div>
+            <div class="dibu-three-03">
+                <img src="service/13.jpg" alt="" />
+                <i>欢迎订阅蒙娜丽莎官方微信 <br/>
+
+              蒙娜丽莎: <s>@ WEIXIN</s><br/>
+
+                微信号:<s>bjmnls</s></i>
+            </div>
+            <div class="dibu-three-04">
+                <img src="service/13.jpg" alt="" />
+                <div class="dibu-three-wzi">
+                    <i>欢迎订阅蒙娜丽莎官方微博</i><br/>
+                    <i> 蒙娜丽莎 @ WEIBO</i><br/>
+                    <i>微博号：北京蒙娜丽莎摄影</i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="dibu-two">
+        <div class="dibu-two-banxin">
+            <div class="dibu-two-01">
+                <dl>
+                    <dt><a href="">REDU</a></dt>
+                    <dd><a href="">CUSTOMER SHARE 客户分享</a></dd>
+                    <dd><a href="">CONTACT US 联系我们</a></dd>
+                    <dd><a href="">REDUABOUT US 关于我们</a></dd>
+                </dl>
+            </div>
+
+            <div class="dibu-two-02" id="mamaipi">
+                <dl>
+                    <dt><a href="">Love Show</a></dt>
+                    <dd><a href="">LOVE SHOW 客片大赏</a></dd>
+                    <dd><a href="">DRESS 礼服展示</a></dd>
+                    <dd><a href="">CUSTOMER 客户好评</a></dd>
+                    <dd><a href="">ORDER 在线订单</a></dd>
+                </dl>
+            </div>
+            <div class="dibu-two-03">
+                <dl>
+                    <dt><a href="">Show Case</a></dt>
+                    <dd><a href=""> FASHION</a></dd>
+                    <dd><a href="">内景HIGH-END</a></dd>
+                    <dd><a href="">外景THEME 主题</a></dd>
+                </dl>
+            </div>
+            <div class="dibu-two-04">
+                <dl>
+
+                    <dt><a href=""> News</a></dt>
+                    <dd><a href="">ACTIVITY 流行趋势</a></dd>
+                    <dd><a href="">SERVICE TIPS 服务贴士</a></dd>
+                    <dd><a href=""> NEWS 最新动态</a></dd>
+                </dl>
+            </div>
+            <div class="dibu-two-05">
+                <dl>
+                    <dt><a href="">Service</a></dt>
+                    <dd><a href="">RECOMMENDED 推荐套系</a></dd>
+                    <dd><a href="">HOT 网络套系</a></dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+    <div class="dibu-one">
+        <div class="dibu-one-banxin">
+            <i>Copyright © 2015-2017 http://www.mnls.com & 北京蒙娜丽莎婚纱摄影_北京婚纱摄影_北京婚纱摄影哪家好_北京婚纱照_北京蒙娜丽莎婚纱摄影官网_北京婚纱影楼版权所有 All Rights Reserved 技术支持： 京ICP备12018289号-1</i>
+
+        </div>
+    </div>
+
+    <script>
+        var box = $id("box"); var inner = box.children[0]; var imgList = inner.children[0]; var imgs = imgList.children; var list = inner.children[1]; var arrow = inner.children[2];
+        var leftBtn = inner.children[2].children[0]; var rightBtn = inner.children[2].children[1]; var pWidth = inner.offsetWidth; var currentIndex = 0; for (var i = 0; i < imgs.length; i++) {
+            var e = document.createElement("i"); e.innerHTML = (i + 1); e.index = i; list.appendChild(e); e.onmouseover = function () {
+                for (var j = 0; j < list.children.length; j++) {
+                    list.children[j].removeAttribute("class");
+                } this.className = "current"; currentIndex = this.index; var target = -currentIndex * pWidth; animate(imglist, target);
+            }
+        }
+        list.children[currentIndex].className = "current"; imglist.appendChild(imglist.children[0].cloneNode(true)); var timer = null;
+        function move() {
+            if (currentIndex == imglist.children.length - 1) { currentIndex = 0; imglist.style.left = "0px"; } currentIndex++; if (currentIndex == imglist.children.length - 1) {
+                list.children[0].className = "current"; list.children[list.children.length - 1].removeAttribute("class");
+            } else {
+                for (var j = 0; j < list.children.length; j++) { list.children[j].removeAttribute("class"); }
+                list.children[currentIndex].className = "current";
+            } var target = -currentIndex * pWidth; animate(imglist, target);
+        } box.onmouseover = function () {
+            arrow.style.display = "block";
+            clearInterval(timer);
+        }
+        box.onmouseout = function () { arrow.style.display = "none"; timer = setInterval(move, 5000); }
+        timer = setInterval(move, 5000); leftBtn.onclick = function () {
+            if (currentIndex == 0) { currentIndex = imglist.children.length - 1; } currentIndex--; var target = -currentIndex * pWidth;
+            animate(imglist, target); for (var j = 0; j < list.children.length; j++) { list.children[j].removeAttribute("class"); list.children[currentIndex].className = "current"; }
+        }
+        rightBtn.onclick = move;
+
+    </script>
+    <script>
+        var config = [{ width: 400, top: 20, left: 50, opacity: 0.2, zIndex: 2 }, { width: 600, top: 70, left: 0, opacity: 0.8, zIndex: 3 }, {
+            width: 800, top: 100, left: 200,
+            opacity: 1, zIndex: 4
+        }, { width: 600, top: 70, left: 600, opacity: 0.8, zIndex: 3 }, { width: 400, top: 20, left: 750, opacity: 0.2, zIndex: 2 }];
+        var lis = document.getElementById("slide").children[0].children; var arr = []; for (var i = 0; i < lis.length; i++) { arr.push(lis[i]); } roate(); var wrap = document.getElementById("wrap");
+        var arrow = document.getElementById("arrow"); wrap.onmouseover = function () { animatev5(arrow, { opacity: 1 }); }
+        wrap.onmouseout = function () { animatev5(arrow, { opacity: 0 }); }
+        var leftBtn = arrow.children[0]; var rightBtn = arrow.children[1]; leftBtn.onclick = function () { arr.push(arr.shift()); roate(); }
+        rightBtn.onclick = function () { arr.unshift(arr.pop()); roate(); }
+        function roate() { for (var j = 0; j < arr.length; j++) { animatev5(arr[j], config[j]); } }
+    </script>
+</body>
+
+</html>
